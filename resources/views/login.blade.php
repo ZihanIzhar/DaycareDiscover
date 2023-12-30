@@ -92,7 +92,7 @@
     background: url('img/bg.jpg');
 }
     
-</style>
+<style>
   body, html {
     background: url('img/bg.jpg');
 }
