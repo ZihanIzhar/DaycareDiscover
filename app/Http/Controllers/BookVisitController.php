@@ -71,9 +71,7 @@ class BookVisitController extends Controller
 
     function update(Request $request, $id){
 
-        $bookVisit = new BookVisit;
-        $bookVisit->user_id = Auth::id();
-        $bookVisit->daycare_id = $request->daycare_id;
+
         
         $this->validate($request, [
             'date'=> 'required',
@@ -84,9 +82,9 @@ class BookVisitController extends Controller
         $books->time = $request->get('time');
         $books->save();
         if(!$books){
-            return redirect(route('bookvisit', ['id' => $bookVisit->daycare_id]))->with('error','Please try again');
+            return redirect(route('bookvisit', ['id' => $books->daycare_id]))->with('error','Please try again');
         }
-        return redirect(route('bookvisit', ['id' => $bookVisit->daycare_id]))->with('success','Booking Has Been Updated');
+        return redirect(route('bookvisit', ['id' => $books->daycare_id]))->with('success','Booking Has Been Updated');
     }
 
         function cancel(Request $request, $id){
@@ -104,12 +102,12 @@ class BookVisitController extends Controller
 
         function approvevisit(){
             $books = Bookvisit::all()->toArray();
-            return view('/operator/approvevisit', compact('books'));
+            return view('operator/approvevisit', compact('books'));
           }
   
           function editapprove($id){
               $books = Bookvisit::find($id);
-              return view('/operator/approvalvisit', compact('books','id'));
+              return view('operator/approvalvisit', compact('books','id'));
           }
   
           function approvalvisit(Request $request,$id){
@@ -119,6 +117,6 @@ class BookVisitController extends Controller
               $books = Bookvisit::find($id);
               $books->status = $request->get('status');
               $books->save();
-              return redirect(route('/operator/approvevisit'))->with('success',"Data updated.");
+              return redirect(route('approvevisit'))->with('success',"Data updated.");
           }
 }
