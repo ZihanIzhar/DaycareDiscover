@@ -9,11 +9,7 @@
     </a>
   
  <!-- Sidebar -->
-<<<<<<< HEAD
  <div class="sidebar" >
-=======
- <div class="sidebar">
->>>>>>> upstream/main
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         
