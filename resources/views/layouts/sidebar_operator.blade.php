@@ -1,4 +1,7 @@
-<aside class="main-sidebar sidebar-dark-primary elevation-4 " style = "position:fixed; height: 100%; background-color: #DEDFE0;"  >
+<aside class="main-sidebar sidebar-dark-primary elevation-4 " style = "position:fixed; height: 100%; background-color: white;"  >
+
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+     
 
 <a href="/admin/home" class="brand-link" style="text-decoration:none; font-size:20px; text-align:center; color:#000;">
       OPERATOR PANEL
@@ -6,7 +9,11 @@
     </a>
   
  <!-- Sidebar -->
+<<<<<<< HEAD
  <div class="sidebar" >
+=======
+ <div class="sidebar">
+>>>>>>> upstream/main
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         
@@ -63,7 +70,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item" style = "position:relative; left:15px;">
-                <a href="{{ url('addvisit') }}" class="nav-link">
+                <a href="{{ url('addvisit') }}" class="nav-link text-dark">
                 <i class="nav-icon fa-solid fa-user"></i>
                   <p>Create Schedule</p>
                 </a>
@@ -71,7 +78,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item" style = "position:relative; left:15px;">
-                <a href="{{ url('viewvisit') }}" class="nav-link">
+                <a href="{{ url('viewvisit') }}" class="nav-link text-dark">
                 <i class="nav-icon fa-solid fa-user"></i>
                   <p>View Schedule</p>
                 </a>
@@ -79,7 +86,7 @@
             </ul>
             <ul class="nav nav-treeview">
               <li class="nav-item" style = "position:relative; left:15px;">
-                <a href="{{ url('approvevisit') }}" class="nav-link">
+                <a href="{{ url('approvevisit') }}" class="nav-link ">
                 <i class="nav-icon fa-solid fa-user"></i>
                   <p>Approve Visit</p>
                 </a>

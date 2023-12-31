@@ -92,6 +92,7 @@
     background: url('img/bg.jpg');
 }
     
+<<<<<<< HEAD
 <style>
   body, html {
     background: url('img/bg.jpg');
@@ -100,6 +101,9 @@
 
 </style>
 
+=======
+</style>
+>>>>>>> upstream/main
 </head>
 <body>
 
